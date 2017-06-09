@@ -10,10 +10,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Assert;
 
-import glint.RamenDojo;
 import problem.Party;
 import problem.Restaurant;
 import problem.Table;
+import solution.MyRestaurant;
 
 abstract class AbstractTest
 {
@@ -22,9 +22,7 @@ abstract class AbstractTest
 
 	protected Restaurant buildRestaurant(int numTables)
 	{
-		Restaurant restaurant;
-		//restaurant = new MyRestaurant();
-		restaurant = new RamenDojo();
+		Restaurant restaurant = new MyRestaurant();
 		restaurant.setTables(buildTables(numTables));
 		return restaurant;
 	}
